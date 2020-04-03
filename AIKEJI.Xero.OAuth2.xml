@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AIKEJI.Xero.OAuth2</name>
+    </assembly>
+    <members>
+        <member name="T:AIKEJI.Xero.OAuth2.AIKEJILicenseException">
+            <summary>
+            Exception that occurs to do with an AIKEJI License.<br />
+            It could either be that the license file is missing, corrupt, or invalid.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.AIKEJILicenseException.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.AIKEJILicenseException.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.AIKEJILicenseException.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.IEncrypter">
+            <summary>
+            This provides a simple interface to encrypt and decrypt data.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.IEncrypter.Encrypt(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Encrypt the provided string contents into a byte array.
+            </summary>
+            <param name="data">The string to encrypt.</param>
+            <param name="cancellationToken"></param>
+            <returns>The encrypted data.</returns>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.IEncrypter.Decrypt(System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Decrypts the provided byte array into a string.
+            </summary>
+            <param name="bytes">The encrypted data.</param>
+            <param name="cancellationToken"></param>
+            <returns>The decrypted string.</returns>
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.IFileWriter">
+            <summary>
+            This provides a simple interface to write to and read from a file.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.IFileWriter.Save(System.String,System.Byte[],System.Threading.CancellationToken)">
+            <summary>
+            Saves the bytes to a file at the specified path.
+            </summary>
+            <param name="path">The path to the file.</param>
+            <param name="bytes">The bytes to write.</param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.IFileWriter.Read(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Reads a file into a byte array.
+            </summary>
+            <param name="path">The path to the file.</param>
+            <param name="cancellationToken"></param>
+            <returns>The bytes read.</returns>
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.ITokenHelper">
+            <summary>
+            Provides functionality to retrieve an authentication token from the Xero API.<br />
+            Also provides functionality to manually refresh, set and load the token from a file.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenHelper.GetToken(System.Threading.CancellationToken)">
+            <summary>
+            Gets the token. This will load the token from the file if present.<br />
+            If there is no token file, it will present a login form for interactive login.<br />
+            If there is a token, and it has expired, it will refresh the token if possible.<br />
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns>A valid Xero token.</returns>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenHelper.ClearToken">
+            <summary>
+            Clears the token from the token helper.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenHelper.ClearLoginSession">
+            <summary>
+            Clears login cookies so that the user can login again.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenHelper.RefreshToken(System.Threading.CancellationToken)">
+            <summary>
+            Attempts to refresh the token.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">If there is no token to refresh.</exception>
+            <param name="cancellationToken"></param>
+            <returns>A valid Xero token.</returns>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenHelper.LoadToken(System.Threading.CancellationToken)">
+            <summary>
+            Loads the token from the file.
+            </summary>
+            <param name="cancellationToken"></param>
+            <exception cref="T:System.InvalidOperationException">There is no token file or it is invalid.</exception>
+            <returns>A valid Xero token.</returns>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenHelper.SetToken(AIKEJI.Xero.OAuth2.XeroToken,System.Threading.CancellationToken)">
+            <summary>
+            Manually set the token.
+            </summary>
+            <param name="token">A valid Xero token.</param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.ITokenProvider">
+            <summary>
+            Provides functionality to get the token.<br />
+            The default implementation is to pop up a WinForms Form that displays the Xero login page.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenProvider.GetToken(AIKEJI.Xero.OAuth2.TokenHelperOptions,System.Threading.CancellationToken)">
+            <summary>
+            Gets a valid token.
+            </summary>
+            <param name="options">The options to use when getting the token.</param>
+            <param name="cancellationToken"></param>
+            <returns>A valid Xero token.</returns>
+            <exception cref="T:System.InvalidOperationException">No token returned from login.<br />
+            or Invalid state received from server.<br />
+            or Local port in use.</exception>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.ITokenProvider.ClearSession">
+            <summary>
+            Clears the browser login session.<br />
+            This can be useful if the user would want to log in as a different user than the one cached.
+            </summary>
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.TokenHelper">
+            <summary>
+            Provides methods to create an instance of the <see cref="T:AIKEJI.Xero.OAuth2.ITokenHelper"/> interface.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.Create(AIKEJI.Xero.OAuth2.TokenHelperOptions)">
+            <summary>
+            Creates a token helper with the provided options.
+            </summary>
+            <param name="options">The options to use to create the token helper.</param>
+            <returns>An instance of ITokenHelper.</returns>
+            <see cref="T:AIKEJI.Xero.OAuth2.TokenHelperOptions"/>
+            <seealso cref="T:AIKEJI.Xero.OAuth2.ITokenHelper"/>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.Create(AIKEJI.Xero.OAuth2.TokenHelperOptions,System.Func{AIKEJI.Xero.OAuth2.IEncrypter},System.Func{AIKEJI.Xero.OAuth2.IFileWriter},System.Func{AIKEJI.Xero.OAuth2.ITokenProvider})">
+            <summary>
+            Creates a token helper with the provided options, and interface implementations.
+            </summary>
+            <param name="options">The options to use to create the token helper.</param>
+            <param name="encrypter">The encrypter to use.</param>
+            <param name="writer">The file writer to use.</param>
+            <param name="tokenProvider">The token provider to use.</param>
+            <returns>An instance of ITokenHelper.</returns>
+            <see cref="T:AIKEJI.Xero.OAuth2.TokenHelperOptions"/>
+            <seealso cref="T:AIKEJI.Xero.OAuth2.ITokenHelper"/>
+            <seealso cref="T:AIKEJI.Xero.OAuth2.IEncrypter"/>
+            <seealso cref="T:AIKEJI.Xero.OAuth2.IFileWriter"/>
+            <seealso cref="T:AIKEJI.Xero.OAuth2.ITokenProvider"/>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.GetToken(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.ClearToken">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.ClearLoginSession">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.RefreshToken(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.LoadToken(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TokenHelper.SetToken(AIKEJI.Xero.OAuth2.XeroToken,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.TokenHelperOptions">
+            <summary>
+            Settings for <see cref="T:AIKEJI.Xero.OAuth2.ITokenHelper"/>.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.ClientId">
+            <summary>
+            The Xero application client id.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.ClientSecret">
+            <summary>
+            The Xero application client secret.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.ListenPort">
+            <summary>
+            The listen port from the redirect uri.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.RedirectUri">
+            <summary>
+            The Xero application redirect URI.<br />
+            Defaults to: <c>"http://localhost:5000/"</c>
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.RefreshTime">
+            <summary>
+            How much time before the token expires before the token is refreshed automaticaly.<br />
+            </summary>
+            <example>
+            If the token expires in 5 minutes, and this is set to the default time of 5 minutes,<br />
+            Then when GetToken is called, the token will be refreshed automatically.<br />
+            Defaults to: 5 minutes.
+            </example>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.TokenFile">
+            <summary>
+            The filename to use when saving and restoring the token.<br />
+            Defaults to: <c>"token.json"</c>
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.WaitMessage">
+            <summary>
+            Message to display to the user when the redirect has taken place, and the authorisation code is being exchanged for a token.<br />
+            Defaults to: <c>"Please wait . . ."</c>
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.Encrypt">
+            <summary>
+            Whether to encrypt the token file or not.<br />
+            This will encrypt the token file as binary.<br />
+            Defaults to: <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.CacheCookies">
+            <summary>
+            Whether to cache Xero login cookies.<br />
+            This prevents the user from having to type in their username and password whenever they are required to login.<br />
+            As this may not always be desirable, this can be set to <c>false</c> to disable the behaviour.<br />
+            Defaults to: <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.FormWidth">
+            <summary>
+            The width of the login form.<br />
+            Defaults to: <c>1024</c>.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.FormHeight">
+            <summary>
+            The height of the login form.<br />
+            Defaults to: <c>768</c>.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.Scope">
+            <summary>
+            The scope of the access granted to the application.<br />
+            By default this grants a set of permissions that is intended to cover a lot of cases.<br />
+            However you should verify what permissions your application requires and only request the minimum.<br />
+            </summary>
+            <see href="https://developer.xero.com/documentation/oauth2/scopes"/>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.TokenHelperOptions.HighDPI">
+            <summary>
+            Whether to enable high DPI mode for the login form.<br />
+            This is likely required if used on a high DPI monitor, otherwise there may be some minor alignment issues.<br />
+            If your application is not already high DPI aware, you will need to make some modifications to get it to work correctly.
+            Defaults to: <c>false</c>.
+            </summary>
+            <see href="https://docs.microsoft.com/en-us/dotnet/framework/winforms/high-dpi-support-in-windows-forms"/>
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.TransientErrorException">
+            <summary>
+            Exception that occurs due to a transient error, such as internet connectivity.<br />
+            Generally it is safe to try again.
+            </summary>
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TransientErrorException.#ctor(System.String,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TransientErrorException.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:AIKEJI.Xero.OAuth2.TransientErrorException.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.XeroTenant">
+            <summary>
+            Encapsulates the data of a Xero tenant.<br />
+            Please read the Xero OAuth2 documentation relating to Xero Tenants.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroTenant.Id">
+            <summary>
+            The id.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroTenant.TenantId">
+            <summary>
+            The tenant id.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroTenant.TenantType">
+            <summary>
+            The tenant type.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroTenant.CreatedDateUtc">
+            <summary>
+            Date created (in UTC).
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroTenant.UpdatedDateUtc">
+            <summary>
+            Date updated (in UTC).
+            </summary>
+        </member>
+        <member name="T:AIKEJI.Xero.OAuth2.XeroToken">
+            <summary>
+            Encapsulates the data of the Xero token.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroToken.Tenants">
+            <summary>
+            List of XeroTenants.<br />
+            See Xero's documentation.
+            </summary>
+            <see cref="T:AIKEJI.Xero.OAuth2.XeroTenant"/>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroToken.AccessToken">
+            <summary>
+            The access token.<br />
+            This is the token used to access Xero's API.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroToken.RefreshToken">
+            <summary>
+            The refresh token.<br />
+            This is used to get a new access token when the access token has expired.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroToken.IdentityToken">
+            <summary>
+            The identity token.
+            </summary>
+        </member>
+        <member name="P:AIKEJI.Xero.OAuth2.XeroToken.ExpiresAtUtc">
+            <summary>
+            DateTime that the token expires (in UTC).
+            </summary>
+        </member>
+    </members>
+</doc>

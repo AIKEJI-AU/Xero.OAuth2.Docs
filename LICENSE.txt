@@ -1,0 +1,370 @@
+
+SOFTWARE LICENCE AGREEMENT
+
+This Agreement is
+
+BETWEEN:
+
+Doctor Tech Pty Ltd (ABN 81 637 065 199) (LICENSOR); and
+
+You ("You", "Your", or "Customer") (LICENSEE)
+
+RECITALS:
+
+A. The Licensor owns certain computer software.
+
+B. The Licensor has agreed to grant to the Licensee a non-exclusive licence to
+    use that computer software and its associated documentation on the terms
+    and conditions set out in this Agreement.
+
+BY DOWNLOADING AND INSTALLING THIS SOFTWARE, YOU ACCEPT ALL TERMS AND
+CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS AND
+CONDITIONS, DO NOT DOWNLOAD OR INSTALL THIS SOFTWARE. YOU MAY ONLY UNLOCK
+AND/OR USE THE SOFTWARE FOR WHICH YOU HAVE A PAID LICENCE OR FOR WHICH YOU HAVE
+LEGALLY RECEIVED A TRIAL LICENCE.
+
+OPERATIVE PROVISIONS:
+
+
+1. DEFINITIONS AND INTERPRETATION
+
+    In this Agreement, unless the context indicates the contrary:
+   
+    CONFIDENTIAL INFORMATION means all information provided by one party to the
+    other in connection with this Agreement where such information is
+    identified as confidential at the time of its disclosure or ought
+    reasonably be considered confidential based on its content, nature or the
+    manner of its disclosure, but excluding:
+   
+        a. information that enters the public domain or is disclosed to a party
+           by a third party, other than through a breach of this Agreement; and
+        b. information developed independently by a party.
+   
+    DOCUMENTATION means any and all proprietary documentation made available to
+    the Licensee by the Licensor for use with the Licensed Software, including
+    any documentation available online.
+   
+    FEES means the fees calculated in accordance with Schedule 2.
+   
+    FORCE MAJEURE EVENT means any event beyond the control of the relevant
+    party.
+   
+    GST has the meaning given in A New Tax System (Goods and Services Tax) Act
+    1999 (Cth), or any other similar tax.
+   
+    INTELLECTUAL PROPERTY RIGHTS means all intellectual property rights,
+    including all copyright, patents, trade marks, design rights, trade
+    secrets, domain names, know how and other rights of a similar nature,
+    whether registrable or not and whether registered or not, and any
+    applications for registration or rights to make such an application.
+   
+    LICENSED SOFTWARE means the AIKEJI.Xero.OAuth2 software owned by the
+    Licensor and delivered to the Licensee by the Licensor pursuant to this
+    Agreement.
+   
+    MORAL RIGHTS has the meaning given under the Copyright Act 1968 (Cth) and
+    includes any similar rights existing in other countries.
+   
+    TERM means indefinitely.
+   
+    PRODUCTS AND SERVICES means products and services You offer.
+   
+    Unless the context requires otherwise:
+   
+       a. a reference to a person includes a corporation or any other legal
+          entity;
+       b. the singular includes the plural and vice versa;
+       c. headings are for convenience and do not form part of this Agreement
+          or otherwise affect the interpretation of this Agreement;
+       d. the term "includes" (or any similar term) means "includes without
+          limitation"; and
+       e. a reference to any statute includes references to any subsequently
+          amended, consolidated or re-enacted version of that statute and all
+          delegated legislation or other statutory instruments made under it.
+
+
+2. GRANT OF LICENCE
+
+    a. The Licensor grants to the Licensee a non-exclusive, world-wide,
+       non-transferable licence to use the Licensed Software and the
+       Documentation during the Term solely in connection with the operation of
+       its Products and Services, subject to and in accordance with the terms
+       and conditions set out in this Agreement.
+    b. The Licensee may permit end users of its Products and Services to use
+       the Licensed Software as part of the normal process of using its
+       Products and Services.
+    c. The Licensee must not:
+        i. use the Licensed Software for any purpose or in any manner other
+           than as set out in paragraph (a);
+        ii. use the Licensed Software in any way that could damage the
+            reputation of the Licensor or the goodwill or other rights
+            associated with the Licensed Software;
+        iii. permit any third party to use the Licensed Software other than as
+             set out in paragraph (b);
+        iv. permit any person to link to any page containing any part of the
+            Licensed Software (including via a hyperlink or RSS feed) without
+            the Licensor's written consent;
+        v. except as expressly permitted by this Agreement, and except to the
+           extent that applicable laws, including the Copyright Act 1968 (Cth),
+           prevent the Licensor restraining the Licensee from doing so:
+            a. reproduce, make error corrections to or otherwise modify or
+               adapt the Licensed Software or the Documentation or create any
+               derivative works based upon the Software or the Documentation;
+            b. de-compile, disassemble or otherwise reverse engineer the
+               Licensed Software or permit any third party to do so; or
+        vi. modify or remove any copyright or proprietary notices on the
+               Licensed Software or the Documentation.
+
+
+3. DELIVERY AND INSTALLATION
+
+    a. The Licensor shall deliver the Licensed Software and the Documentation
+       to the Licensee through NuGet.org.
+    b. If the Licensee reasonably requests, the Licensor can assist in
+       installing the Licensed Software on the Licensee's computer equipment at
+       a time and cost agreed between the parties.
+    c. The Licensee must ensure that the computer equipment on which the
+       Licensed Software is to be installed is in good, up to date working
+       order and operating condition when the Licensor commences installation
+       of the Licensed Software.
+    d. The Licensee must ensure that the computer equipment on which the
+       Licensed Software is to be installed meets the system requirement of the
+       Licensed Software.
+    e. The Licensee must ensure that the computer equipment on which the
+       Licensed Software is to be installed has or is able to have software
+       dependency packages that is required by the Licensed Software installed.
+
+
+4. INTELLECTUAL PROPERTY RIGHTS
+
+    a. Nothing in this Agreement constitutes a transfer of any Intellectual
+       Property Rights.
+    b. The Licensee:
+        i. acknowledges that the Licensor owns all Intellectual Property Rights
+           in the Licensed Software; and
+        ii. will not directly or indirectly do anything that would or might
+            invalidate or put in dispute the Licensor's title in the Licensed
+            Software.
+    c. If any person makes any claim alleging that any of the Licensed Software
+       (or use of any of the Licensed Software) infringes any Intellectual
+       Property Rights or Moral Rights of any person, the Licensee must:
+        i. promptly notify the Licensor in writing;
+        ii. not make any admissions or take any action in relation to the claim
+            without the Licensor's written consent;
+        ii. permit the Licensor control over any and all investigations,
+            negotiations, settlement and dispute resolution proceedings
+            relating to the claim; and
+        iv. cooperate with, assist and act at all times in accordance with the
+            reasonable instructions of the Licensor in relation to the claim
+            and any consequent investigations, negotiations, settlement and
+            dispute resolution proceedings.
+
+
+5. PAYMENT
+
+    a. The Licensee must pay the Licensor the Fees.
+    b. The Licensor will invoice the Licensee for the Fees in arrears.
+    c. Except as otherwise provided in this Agreement, all monetary amounts
+       referred to in this Agreement are in USD (United States Dollars).
+    d. Each invoice is payable within 7 days upon receipt of the invoice. If
+       the Licensee has not paid an invoice in full by that date, the Licensee 
+       must pay interest on any unpaid amount from that date until the date of 
+       payment, to be calculated on a daily basis at a rate of 3 percentage 
+       points over the cash rate at the Reserve Bank of Australia. (or, if that
+       rate ceases to exist, a comparable rate nominated by the Licensor).
+
+
+6. GST
+
+    a. All amounts payable under this Agreement are expressed exclusive of GST.
+    b. In respect of any taxable supply, the Licensee must pay to the Licensor
+       an additional amount equal to the prevailing GST rate, payable at the 
+       same time and in the same manner as the Fees, subject to the receipt by 
+       the Licensee of a valid tax invoice.
+
+
+7. AUDIT
+
+    The Licensee must permit the Licensor (or its nominated auditor) to audit
+    the records and premises of the Licensee at any time during the Term and
+    for 3 years following the end of the Term, on at least 5 days written
+    notice, for the purpose of confirming the Licensee's compliance with this
+    Agreement.
+
+
+8. WARRANTIES
+
+   a. This software is provided by the Licensor "As is" and any express or
+      implied warranties, including, but not limited to, the implied warranties
+      of merchantability and fitness for a particular purpose are disclaimed.
+      In no event shall the Licensor be liable for any direct, indirect,
+      incidental, special, exemplary, or consequential damages (including, but
+      not limited to, procurement of substitute goods or services; loss of use,
+      data, or profits; or business interruption) however caused and on any 
+      theory of liability, whether in contract, strict liability, or tort 
+      (including negligence or otherwise) arising in any way out of the use of 
+      this software, even if advised of the possibility of such damage.
+
+
+9. LIABILITY
+
+    a. To the full extent permitted by law, the Licensor excludes all liability
+       in respect of loss of data, interruption of business or any
+       consequential or incidental damages.
+    b. To the full extent permitted by law, the Licensor excludes all
+       representations, warranties or terms (whether express or implied) other
+       than those expressly set out in this Agreement.
+    c. The Licensor's total aggregate liability for all claims relating to this
+       Agreement is limited to the Fees payable under this Agreement.
+    d. Either party's liability for any claim relating to this Agreement will
+       be reduced to the extent to which the other party contributed to the
+       damage arising from the claim.
+    e. This Agreement is to be read subject to any legislation which prohibits
+       or restricts the exclusion, restriction or modification of any implied
+       warranties, conditions, guarantees or obligations. If such legislation
+       applies, to the extent possible, the Licensor limits its liability in
+       respect of any claim to, at the Licensor's option:
+        i. in the case of goods:
+            a. the replacement of the goods or the supply of equivalent goods;
+            b. the repair of the goods;
+            c. the payment of the cost of replacing the goods or of acquiring
+               equivalent goods; or
+            d. the payment of having the goods repaired; and
+        ii. in the case of services:
+            a. the supply of the services again; or
+            b. the payment of the cost of having the services supplied again.
+
+
+10. TERMINATION
+
+    A party may terminate this Agreement by written notice to the other if any
+    of the following events has occurred in respect of the other party:
+
+        a. a material breach of this Agreement which:
+            i. is not remediable; or
+            ii. if capable of remedy, is not remedied by the other party within
+                14 days of written notice;
+        b. an insolvency event occurs, other than an internal reconstruction
+           with notice to the other party.
+
+
+11. CONSEQUENCES OF TERMINATION
+
+    If this Agreement is terminated or expires for any reason, then, in
+    addition and without prejudice to any other rights or remedies available:
+
+        a. the parties are immediately released from their obligations under
+           the Agreement except those obligations in clauses 8, 10, 12, and 13
+           and any other obligations that, by their nature, survive
+           termination;
+        b. each party retains the claims it has against the other;
+        c. the Licensee must immediately pay all outstanding Fees.
+
+
+12. CONFIDENTIALITY
+
+    a. A party must not, without the prior written consent of the other, use or
+       disclose the other party's Confidential Information unless expressly
+       permitted by this Agreement or required to do so by law or any
+       regulatory authority.
+    b. A party may:
+        i. use the Confidential Information of the other party solely for the
+           purposes of complying with its obligations and exercising its rights
+           under this Agreement; and
+        ii. disclose the Confidential Information to its personnel or advisers
+            to the extent necessary for them to know the information for
+            purposes related to this Agreement, but only if reasonable steps
+            are taken to ensure that the confidentiality of the information is
+            retained.
+    c. Each party must implement and maintain effective security measures to
+       prevent unauthorised use and disclosure of the other party's
+       Confidential Information while it is in the receiving party's possession
+       or control.
+    d. Each party must return, or at the other party's option destroy, all
+       Confidential Information of the disclosing party in the receiving
+       party's possession or control, on the earlier of the Licensor's request
+       or on termination of this Agreement for any reason.
+
+
+13. NOTICES
+
+    a. All notices must be in writing and can be given by:
+        i. hand delivery during normal business hours;
+        ii. registered post; or
+        iii. facsimile followed within 2 business days by one of the means
+             listed above.
+    b. A notice is deemed to be given and received:
+        i. if delivered in accordance with paragraph (a)(i). on the next
+           business day after the day of delivery;
+        ii. if sent in accordance with paragraph (a)(ii). 5 clear business days
+            after the day of posting;
+        iii. if sent in accordance with paragraph (a)(iii). on the next
+             business day after transmission.
+
+
+14. GENERAL
+
+    a. The Licensee must not assign, sublicence or otherwise deal in any other
+       way with any of its rights under this Agreement without the prior
+       written consent of the Licensor.
+    b. Nothing contained in this Agreement creates any relationship of
+       partnership or agency between the parties.
+    c. If a provision of this Agreement is invalid or unenforceable it is to be
+       read down or severed to the extent necessary without affecting the
+       validity or enforceability of the remaining provisions.
+    d. Each party must at its own expense do everything reasonably necessary to
+       give full effect to this Agreement and the events contemplated by it.
+    e. This Agreement (and any documents executed in connection with it) is the
+       entire agreement of the parties about its subject matter and supersedes
+       all other representations, arrangements or agreements. Other than as 
+       expressly set out in this Agreement, no party has relied on any
+       representation made by or on behalf of the other.
+    f. This Agreement may be amended by the Licensor from time to time.
+    g. A provision of or a right under this Agreement may not be waived or
+       varied except in writing signed by the person to be bound.
+    h. This Agreement may be executed in counterparts which will be taken
+       together to constitute one document.
+    i. A party will not be responsible for a failure to comply with its
+       obligations under this Agreement to the extent that failure is caused by
+       a Force Majeure Event, provided that the party keeps the other closely
+       informed in such circumstances and uses reasonable endeavours to rectify
+       the situation.
+    j. Without limiting any other right to terminate under this Agreement, if a
+       Force Majeure Event affects a party's performance under this Agreement 
+       for more than thirty (30) consecutive days, the other party may 
+       immediately terminate this Agreement by written notice.
+    k. All stamp duties and other government charges in relation to this
+       Agreement must be paid by the Licensee.
+    l. This Agreement is governed by the laws of Queensland and each party
+       submits to the jurisdiction of the courts of Queensland.
+
+
+15. TERMS AND CONDITIONS OF SUPPORT
+
+    a. Each new licence purchased and issued comes with two years support of
+       free upgrades to newer versions.
+    b. The licence purchased is a perpetual licence that does not expire.
+       However, the ability to update to newer versions ends when support
+       expires.
+    c. Support of upgrades to newer versions can be purchased at a reduced fee
+       on a yearly basis.
+    d. The AIKEJI.Xero.OAuth2 library is specifically built for Xero OAuth2.
+       Therefore, AIKEJI will cease supporting the library when Xero cease the
+       support of its OAuth2 API.
+
+
+
+SCHEDULE 1
+
+1. Licensed Software
+
+    This library is a .NET library that presents a simplified API for
+    retrieving access tokens using Xero's OAuth2 API with an integrated login
+    experience using an embedded browser.
+
+
+SCHEDULE 2
+
+1. Fees
+
+    $200

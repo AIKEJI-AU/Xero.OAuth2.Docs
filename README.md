@@ -26,7 +26,7 @@ However due to keeping the package flexible, the package size is increased.
 
 ## Installation & Setup
 
-The library is provided on [nuget.org](http://nuget.org/).\
+The library is provided on [nuget.org](https://nuget.org/).\
 For help on installing nuget packages, please refer to Microsoft's [documentation](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
 All configuration is done in code, refer to the [configuration](#configuration) section and intellisense documentation for details.\
@@ -224,8 +224,8 @@ For any questions or issues related to licensing, please contact us directly usi
 
 ## Contact Us
 
-[http://aikeji.com.au/contact.html](http://aikeji.com.au/contact.html)
+[https://aikeji.com.au/contact.html](https://aikeji.com.au/contact.html)
 
 ## Purchase License
 
-[http://aikeji.com.au/products.html](http://aikeji.com.au/products.html)
+[https://aikeji.com.au/products.html](https://aikeji.com.au/products.html)

@@ -48,7 +48,8 @@ See [Configuration](#configuration).
 5. Refer to sample code on how to use the library.\
 See [C#](#c#-sample) or [VB.Net](#vb.net-sample).
 
-6. (Optional) Add a reference to `Xero.NetStandard.OAuth2` to use `Xero`'s provided API library.
+6. (Optional) Add a reference to `Xero.NetStandard.OAuth2` to use `Xero`'s provided API library.\
+[https://www.nuget.org/packages/Xero.NetStandard.OAuth2](https://www.nuget.org/packages/Xero.NetStandard.OAuth2)
 
 7. (Optional) Add a reference to `RestSharp` to use a generic REST client instead of `Xero`'s library.
 
@@ -222,7 +223,8 @@ End Class
 
 Example `C#` token usage with Xero's Client \
 Note: This uses Xero's `Xero.NetStandard.OAuth2` library which is supported by Xero.\
-Xero's library is async, so the method must be `async`, and the `GetContactsAsync` call awaited.
+Xero's library is async, so the method must be `async`, and the `GetContactsAsync` call awaited.\
+[https://www.nuget.org/packages/Xero.NetStandard.OAuth2](https://www.nuget.org/packages/Xero.NetStandard.OAuth2)
 
 ```csharp
 using AIKEJI.Xero.OAuth2;
@@ -256,7 +258,8 @@ static class UseTokenExample
 
 Example `VB.Net` token usage with Xero's Client\
 Note: This uses Xero's `Xero.NetStandard.OAuth2` library which is supported by Xero.\
-Xero's library is async, so the `Sub` must also be `Async`, and the `GetContactsAsync` call awaited.
+Xero's library is async, so the `Sub` must also be `Async`, and the `GetContactsAsync` call awaited.\
+[https://www.nuget.org/packages/Xero.NetStandard.OAuth2](https://www.nuget.org/packages/Xero.NetStandard.OAuth2)
 
 ```vbnet
 Imports AIKEJI.Xero.OAuth2

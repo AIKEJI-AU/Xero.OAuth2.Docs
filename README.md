@@ -20,7 +20,7 @@ The library is dependant on the `.NET Framework v4.6`.\
 It also has a dependency on the nuget package `CefSharp.Winforms`.\
 This is bundled inside the nuget package to aid in ease of use.
 
-Because of how the `CefSharp` redistributables are packaged, we have decided to package these dependencies directly into out nuget package, rather than let nuget try to work out how to reference files, which can differ depending on whether your project uses `packages.config` or `PackageReference` style references.\
+Because of how the `CefSharp` redistributables are packaged, we have decided to package these dependencies directly into our nuget package, rather than let nuget try to work out how to reference files, which can differ depending on whether your project uses `packages.config` or `PackageReference` style references.\
 This means that you will get both x86 and x64 dependencies for a project targeting `Any CPU`, but only the relevant architecture when targeting `x86` or `x64`.\
 However due to keeping the package flexible, the package size is increased.
 
@@ -46,7 +46,7 @@ See [Purchase Licence](#purchase-licence)
 See [Configuration](#configuration).
 
 5. Refer to sample code on how to use the library.\
-See [C#](#c#-sample) or [VB.Net](#vb.net-sample).
+See [C#](#c-sample) or [VB.Net](#vbnet-sample).
 
 6. (Optional) Install the `Xero.NetStandard.OAuth2` package with nuget, to use `Xero`'s provided API library.\
 [https://www.nuget.org/packages/Xero.NetStandard.OAuth2](https://www.nuget.org/packages/Xero.NetStandard.OAuth2)
@@ -136,7 +136,7 @@ Log in to the [Xero Developer portal](https://developer.xero.com/myapps) to find
 Please check the `Xero` documentation to determine what scope(s) your application requires.\
 [https://developer.xero.com/documentation/oauth2/scopes](https://developer.xero.com/documentation/oauth2/scopes)
 
-Check either the [C# Sample](#c#-sample) or [VB.Net](#vb.net-sample) Sample on sample code for configuring the `TokenHelper`.
+Check either the [C# Sample](#c-sample) or [VB.Net](#vbnet-sample) Sample on sample code for configuring the `TokenHelper`.
 
 ### Usage
 
@@ -326,6 +326,10 @@ For any questions or issues related to licensing, please contact us directly usi
 ## Contact Us
 
 [https://aikeji.com.au/contact.html](https://aikeji.com.au/contact.html)
+
+## Request Trial Licence
+
+[https://aikeji.com.au/products.html](https://aikeji.com.au/products.html)
 
 ## Purchase Licence
 

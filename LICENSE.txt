@@ -341,7 +341,7 @@ OPERATIVE PROVISIONS:
 
 15. TERMS AND CONDITIONS OF SUPPORT
 
-    a. Each new licence purchased and issued comes with two years support of
+    a. Each new licence purchased and issued comes with one year's support of
        free upgrades to newer versions.
     b. The licence purchased is a perpetual licence that does not expire.
        However, the ability to update to newer versions ends when support

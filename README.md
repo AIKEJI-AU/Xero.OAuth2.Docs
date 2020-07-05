@@ -3,7 +3,13 @@
 
 ## Description
 
-This library is a .NET library that presents a simplified API for retrieving access tokens using `Xero`'s OAuth2 API with an integrated login experience using an embedded browser.
+This library is a `.NET` library that presents a simplified API for retrieving access tokens using `Xero`'s OAuth2 API with an integrated login experience using an embedded browser.
+
+Access tokens allow applications to easily authenticate after a user has logged in.
+
+## Release Notes
+
+[Release Notes](release-notes.md)
 
 ## Features
 
@@ -54,6 +60,52 @@ See [C#](#c-sample) or [VB.Net](#vbnet-sample).
 7. (Optional) Install the `RestSharp` package with nuget, to use a generic REST client.\
 [https://www.nuget.org/packages/RestSharp](https://www.nuget.org/packages/RestSharp)
 
+## Usage with Xero's API
+
+This library handles the OAuth2 sides of things, and allows you to easily get an access token, which is required to access Xero's API.\
+This library does not handle or provide the functionality to actually access Xero's other API endpoints, such as creating a Contact or Invoice.\
+Xero's API is an HTTP REST API, which means there are a few options to access it.\
+For more information on Xero's API, check their website: [https://developer.xero.com/documentation/](https://developer.xero.com/documentation/)
+
+### 1. (Advanced) Manual HTTP calls
+
+If you understand HTTP, you can use any HTTP client, such as the `.NET` `HttpClient` to manually create HTTP requests.
+You will have to add the `AccessToken` and `TenantId` as headers in each of your requests.\
+See `6. Call the API`: [https://developer.xero.com/documentation/oauth2/auth-flow](https://developer.xero.com/documentation/oauth2/auth-flow)
+The documentation has examples of how to do different options and has an API Previewer.\
+You will also need to serialise and deserialise the requests and responses yourself.
+
+### 2. Use a generic REST client
+
+Similar to #1, except that the client assists in serialising for you, although you will need to create your own models.\
+A popular free `.NET` REST client is RestSharp, and there are a lot of samples and examples on how to call REST APIs.
+
+### 3. (Recommended) Use Xero's client library
+
+Xero themselves provide a `.NET` client library via nuget
+[https://github.com/XeroAPI/Xero-NetStandard](https://github.com/XeroAPI/Xero-NetStandard)\
+Note that you should check what endpoints are supported, as not all of them are currently supported with the library.\
+\
+See the [Full Xero API C# Sample](#full-xero-api-c-sample) or [Full Xero API VB.Net Sample](#full-xero-api-vbnet-sample) for sample code.
+\
+Note that this library targets `netstandard 2.0`, and as such your application will need to be on `.NET Framework v4.6.1` or later.\
+See: [https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support)
+
+### 4. (Advanced) Generate a client library
+
+A more advanced option is to generate your own client library.\
+`NSwag Studio` provide a tool that can generate `.NET` code from an API definition.\
+The tool can be found here: [https://github.com/RicoSuter/NSwag](https://github.com/RicoSuter/NSwag)\
+And Xero's API definitions can be found here: [https://github.com/XeroAPI/Xero-OpenAPI](https://github.com/XeroAPI/Xero-OpenAPI)
+
+### Recommendations
+
+Our recommendation is to use Xero's client library if possible.\
+This simplifies access to Xero's APIs, and is accessible to developers of all levels of experience.
+
+If the Xero client library is not usable in your application for whatever reason, then using the `HttpClient` is a good option for developers familiar with `HTTP` calls.\
+Otherwise `RestSharp` would be recommended, as it takes care of a lot of the `HTTP` concerns and lets you focus on coding.
+
 ## How It Works
 
 This library provides a simple `ITokenHelper` interface to use.\
@@ -76,12 +128,28 @@ This will cache the session used when logging in to the `Xero` website.\
 If this is not desired, then this functionality can be disabled with the `CacheCookies` property in the `TokenHelperOptions`.\
 Alternatively, the current session can be cleared using the `ClearLoginSession` method in the `ITokenHelper`.
 
+#### Code Flow Details
+
+When creating a Xero application, you may select either `Auth code` or `Auth code with PKCE`.\
+If you are creating a new desktop application, `PKCE` is recommended due to its stronger security.\
+If you already have a non-`PKCE` application, you can continue to use it.
+
+The Xero documentation explains how the code flow works in detail.\
+[https://developer.xero.com/documentation/oauth2/auth-flow](https://developer.xero.com/documentation/oauth2/auth-flow)
+
+#### PKCE Flow Details
+
+`PKCE` (pronounced `pixie`) is a more secure authorisation flow for mobile or desktop applications.\
+It can prevent certain attacks and allows public applications to securely authenticate.\
+For more details on `PKCE`, see this link: [https://oauth.net/2/pkce/](https://oauth.net/2/pkce/)
+
+The Xero documentation explains how the `PKCE` flow works in detail.\
+[https://developer.xero.com/documentation/oauth2/pkce-flow](https://developer.xero.com/documentation/oauth2/pkce-flow)
+
 ## Code & Usage
 
 ### API
 
-<details>
-<summary>Click to expand.</summary>
 The package comes with `IntelliSense` documentation, please check the documentation on interfaces and methods for help and usage.
 
 ```csharp
@@ -98,6 +166,7 @@ namespace AIKEJI.Xero.OAuth2
         public string ClientSecret { get; set; }
         public int ListenPort { get; }
         public Uri RedirectUri { get; set; }
+        public bool UsePKCE { get; set; }
         public TimeSpan RefreshTime { get; set; }
         public string TokenFile { get; set; }
         public string WaitMessage { get; set; }
@@ -124,25 +193,80 @@ namespace AIKEJI.Xero.OAuth2
         Task SetToken(XeroToken token, CancellationToken cancellationToken = default);
     }
 ```
-</details>
 
 ### Configuration
 
 Configuration is done with the `TokenHelperOptions` class, which is then passed into `TokenHelper.Create` to create an `ITokenHelper` instance that can be used to get a `Xero` access token.\
 \
 The `ClientId`, `ClientSecret`, and `RedirectUri` all come from your configured `Xero` app.\
-Log in to the [Xero Developer portal](https://developer.xero.com/myapps) to find your application details.\
-\
-Please check the `Xero` documentation to determine what scope(s) your application requires.\
-[https://developer.xero.com/documentation/oauth2/scopes](https://developer.xero.com/documentation/oauth2/scopes)
+Log in to the [Xero Developer portal](https://developer.xero.com/myapps) to find your application details.
 
-Check either the [C# Sample](#c-sample) or [VB.Net](#vbnet-sample) Sample on sample code for configuring the `TokenHelper`.
+If you are using `PKCE`, then you will not have a `ClientSecret`.\
+See [PKCE Flow Details](#pkce-flow-details).
+
+#### Code Flow Example
+
+See the [Code Flow Details](#code-flow-details) section for more information.
+
+To use the library set the `ClientId` and `ClientSecret` values to those found in your Xero application.
+
+`C# snippet`
+
+```csharp
+// Configure the TokenHelper
+var options = new TokenHelperOptions
+{
+    ClientId = "<your-client-id>",
+    ClientSecret = "<your-client-secret>",
+    RedirectUri = new Uri("http://localhost:5000/")
+};
+```
+
+`VB.Net` snippet.
+
+```vbnet
+Dim options = New TokenHelperOptions()
+With options
+    .ClientId = "<your-client-id>"
+    .ClientSecret = "<your-client-secret>"
+    .RedirectUri = New Uri("http://localhost:5000/")
+End With
+```
+
+#### PKCE Flow Example
+
+See the [PKCE Flow Details](#pkce-flow-details) section for more information.
+
+When creating a Xero application, you may select either `Auth code` or `Auth code with PKCE`.\
+To use `PKCE`, set the `UsePKCE` value to true and set the `ClientId` value.\
+The library takes care of the `PKCE` challenge generation and verification.
+
+`C# snippet`
+
+```csharp
+// Configure the TokenHelper
+var options = new TokenHelperOptions
+{
+    ClientId = "<your-client-id>",
+    UsePKCE = true,
+    RedirectUri = new Uri("http://localhost:5000/")
+};
+```
+
+`VB.Net` snippet.
+
+```vbnet
+Dim options = New TokenHelperOptions()
+With options
+    .ClientId = "<your-client-id>"
+    .UsePKCE = True
+    .RedirectUri = New Uri("http://localhost:5000/")
+End With
+```
 
 ### Usage
 
 #### C# Sample
-
-<details><summary>Click to expand.</summary>
 
 Example `C#` WinForms usage.
 
@@ -183,11 +307,7 @@ public partial class Form1 : Form
 }
 ```
 
-</details>
-
 #### VB&#46;Net Sample
-
-<details><summary>Click to expand.</summary>
 
 Example `VB.Net` WinForms usage.
 
@@ -216,11 +336,7 @@ Public Class Form1
 End Class
 ```
 
-</details>
-
 ### Full Xero API C# Sample
-
-<details><summary>Click to expand.</summary>
 
 Example `C#` token usage with Xero's Client \
 Note: This uses Xero's `Xero.NetStandard.OAuth2` library which is supported by Xero.\
@@ -251,17 +367,12 @@ static class UseTokenExample
 }
 ```
 
-</details>
-
 ### Full Xero API VB&#46;Net Sample
-
-<details><summary>Click to expand.</summary>
 
 Example `VB.Net` token usage with Xero's Client\
 Note: This uses Xero's `Xero.NetStandard.OAuth2` library which is supported by Xero.\
 [https://www.nuget.org/packages/Xero.NetStandard.OAuth2](https://www.nuget.org/packages/Xero.NetStandard.OAuth2)\
 Xero's library is async, so the `Sub` must also be `Async`, and the `GetContactsAsync` call awaited.
-
 
 ```vbnet
 Imports AIKEJI.Xero.OAuth2
@@ -303,8 +414,6 @@ Public Class Form1
 End Class
 
 ```
-
-</details>
 
 ## Compatibility
 

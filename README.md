@@ -3,9 +3,7 @@
 
 ## Description
 
-This library is a `.NET` library that presents a simplified API for retrieving access tokens using `Xero`'s OAuth2 API with an integrated login experience using an embedded browser.
-
-Access tokens allow applications to easily authenticate after a user has logged in.
+This library is a `.NET` library that presents a simplified API for retrieving access tokens using `Xero`'s OAuth2 API with an integrated login experience using an embedded browser. This library can be used by any Windows `.NET` desktop application, however is most useful for applications using WinForms or WPF (Windows Presentation Foundation). Our library enables your application to easily authenticate with `Xero`, reducing development effort and complexity of implementation.
 
 ## Release Notes
 

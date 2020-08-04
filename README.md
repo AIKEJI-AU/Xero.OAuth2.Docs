@@ -262,6 +262,15 @@ With options
 End With
 ```
 
+#### RedirectUri
+
+The `RedirectUri` can be anything that you can configure in the Xero Developer portal, including `http` and `https`.\
+However a localhost URI such as `http://localhost:5000/` is recommended, and is the default.\
+We recommend ending your URI with a forward slash `/`.
+
+The value of the RedirectUri configured in `TokenHelperOptions` must exactly match one of the Redirect URI's configured in Xero.\
+You may configure multiple Redirect URIs in Xero if you wish, although only one can be configured to use in the library.
+
 ### Usage
 
 #### C# Sample

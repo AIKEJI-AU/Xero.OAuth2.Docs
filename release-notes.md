@@ -1,6 +1,13 @@
 
 # AIKEJI.Xero.OAuth2 Release Notes
 
+## 1.4.0
+
+* Feature: Internal improvements for library redirect performance.
+* Bugfix: Fix possible error from race condition.
+* Docs: Add section for RedirectUri.
+* Obsolete: ListenPort and WaitMessage in TokenHelperOptions marked Obsolete to be removed in a future version.
+
 ## 1.3.0
 
 * Feature: Add support for PKCE authorisation flow. [info](https://developer.xero.com/documentation/oauth2/pkce-flow) [docs](README.md#pkce-flow-details)

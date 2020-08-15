@@ -1,6 +1,10 @@
 
 # AIKEJI.Xero.OAuth2 Release Notes
 
+## 1.4.1
+
+* Bugfix: Fix deadlock when calling GetToken from non-async method.
+
 ## 1.4.0
 
 * Feature: Internal improvements for library redirect performance.

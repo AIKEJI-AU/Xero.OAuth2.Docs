@@ -430,8 +430,10 @@ If you are running your application on a monitor with high DPI scaling, then you
 
 ## Licence
 
-Licensing is provided with a file `aikeji.lic`.
-This file must be placed in the same location as the library, assembly `AIKEJI.Xero.OAuth2.dll`.
+Licensing is provided with a file `<your-name>_<licence-type>.aikeji.lic`.\
+eg: `john_doe_trial.aikeji.lic`\
+This file must be placed in the same location as the library, assembly `AIKEJI.Xero.OAuth2.dll`.\
+Please ensure that only one licence file is present at a time.
 
 ## Support
 

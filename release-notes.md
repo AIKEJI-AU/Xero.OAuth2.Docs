@@ -1,6 +1,11 @@
 
 # AIKEJI.Xero.OAuth2 Release Notes
 
+## 1.5.0
+
+* Feature: Added support for Enterprise licence.
+* Feature: Licence file naming convention changed to '*.aikeji.lic'. ('aikeji.lic' still supported).
+
 ## 1.4.1
 
 * Bugfix: Fix deadlock when calling GetToken from non-async method.

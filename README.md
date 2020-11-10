@@ -1,5 +1,25 @@
-
 # AIKEJI.Xero.OAuth2.Docs
+
+<!-- TOC -->
+
+1. [Description](#description)
+2. [Release Notes](#release-notes)
+3. [Features](#features)
+4. [Dependencies](#dependencies)
+5. [Installation & Setup](#installation--setup)
+6. [Steps](#steps)
+7. [Usage with Xero's API](#usage-with-xeros-api)
+8. [How It Works](#how-it-works)
+9. [Code & Usage](#code--usage)
+10. [Compatibility](#compatibility)
+11. [Licence](#licence)
+12. [Support](#support)
+13. [Contact Us](#contact-us)
+14. [Request Trial Licence](#request-trial-licence)
+15. [Purchase Licence](#purchase-licence)
+16. [Troubleshooting](#troubleshooting)
+
+<!-- /TOC -->
 
 ## Description
 
@@ -452,3 +472,164 @@ For any questions or issues related to licensing, please contact us directly usi
 ## Purchase Licence
 
 [https://aikeji.com.au/products.html](https://aikeji.com.au/products.html)
+
+## Troubleshooting
+
+This section is to help developers when they run into any error messages, providing guidance on why the error is occurring as well as resolving them.
+
+There are two main types of errors that may be presented.
+
+1. Xero web login errors.
+
+These errors are from the Xero web server and generally indicate a configuration error.
+
+2. Exception from library.
+
+These errors are raised by the library code, and can indicate invalid configuration, an issue with Xero's web server, network problem, or others.
+
+### Common Xero web login errors
+
+#### unauthorized_client : Invalid redirect_uri
+
+![invalid redirect_uri](img/error_invalid_redirect_uri.png)
+
+Error message displayed when trying to get token.
+
+This is caused by the RedirectUri specified in TokenHelperOptions not exactly matching one of the URIs in `OAuth 2.0 redirect URI` in your Xero App's settings.
+
+Browse to [https://developer.xero.com/myapps/](https://developer.xero.com/myapps/) and login, select your app, and ensure that the values match.\
+Note that there is currently a bug in Xero where adding a slash to a URI and clicking save does not actually update the saved URI.
+
+#### unauthorized_client : Unknown client or client not enabled
+
+Error message displayed when trying to get token.
+
+![unauthorized_client](img/error_unknown_client.png)
+
+This is caused by using an unrecognised `ClientId` in `TokenHelperOptions`.
+
+Browse to [https://developer.xero.com/myapps/](https://developer.xero.com/myapps/) and login, select your app, and ensure that the `ClientId` you are using matches exactly.
+
+#### invalid_scope : Invalid scope
+
+Error message displayed when trying to get token.
+
+![invalid_scope](img/error_invalid_scope.png)
+
+This is caused by configuring scopes that Xero considers invalid, `Scope` in `TokenHelperOptions`.
+
+Check the scopes that you have configured in TokenHelperOptions (separate each scope by a space).\
+Refer to the Xero documentation on scopes here to work out what scopes your application requires. [https://developer.xero.com/documentation/oauth2/scopes](https://developer.xero.com/documentation/oauth2/scopes)\
+For example you may need `openid`, `profile`, `email`, `offline_access`, and `accounting.transactions`.\
+In that case you can set the `Scope` variable to `openid profile email offline_access accounting.transactions`.
+
+### Exception Handling
+
+The next section details a list of common Exceptions that may be raised by the library.\
+These may be the result of invalid input to the method, or licence issues, or errors from connecting to Xero's OAuth2 API.
+
+It is important to call these methods correctly in order to be able to catch these Exceptions.
+
+See Microsoft's documentation for information on [Exceptions in async methods](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch#exceptions-in-async-methods).
+See Microsoft's documentation for information on [Best Practices in Asynchronous Programming](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming).
+
+```vbnet
+Async Sub HandleException(helper As ITokenHelper)
+    Try
+        Dim token = Await helper.GetToken()
+        ' do something with token
+    Catch ex As Exception
+        ' do something with exception
+        MessageBox.Show(ex.GetBaseException().Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+    End Try
+End Sub
+```
+
+### Common Exceptions
+
+Exceptions are thrown by the library during unexpected behaviour.\
+The exception type and error message indicate what went wrong, and why.
+
+#### Licence/Trial Expired
+
+Trial licences are set to expire after a set period of time.\
+If these licences are used past this date, then an appropriate exception is raised.
+
+![your trial has expired](img/error_expired_trial.png)
+![your licence has expired](img/error_expired_licence.png)
+
+#### Support Ended
+
+After purchasing a valid licence, the library may be updated freely during the support period.\
+Whilst the Software Licence is a perpetual licence that does not expire, the ability to update to newer versions ends when support expires.\
+If attempting to use a newer version, an appropriate error exception will be raised.\
+The error message states the latest version that can be used with the licence.
+
+![your support has ended](img/error_support_ended.png)
+
+#### invalid_client
+
+Error message displayed after allowing access to application.
+
+![invalid_client](img/error_invalid_client.png)
+
+This is usually caused by an invalid client secret, `ClientSecret` from `TokenHelperOptions`.
+
+Browse to [https://developer.xero.com/myapps/](https://developer.xero.com/myapps/) and login, select your app.\
+You can only retrieve the secret value when you first create the secret.\
+Ensure that the secret you are using also matches the `ClientId` you are using.
+
+#### No authorisation code returned
+
+Error message displayed if the login process was cancelled for any reason.
+
+![no_auth_code](img/error_no_auth_code.png)
+
+This occurs if the user closes the login form, or cancels granting access to the application.\
+In this case the Exception should be expected and handled.
+
+#### Required parameter ClientId
+
+Error message displayed when calling `TokenHelper.Create`.
+
+![clientid is required](img/error_missing_clientid.png)
+
+The `ClientId` property is required.
+
+Browse to [https://developer.xero.com/myapps/](https://developer.xero.com/myapps/) and login, select your app, and copy the `Client id` value into the `ClientId` property.
+
+#### Required parameter ClientSecret
+
+Error message displayed when calling `TokenHelper.Create`.
+
+![clientsecret is required](img/error_missing_clientsecret.png)
+
+The `ClientSecret` property is required if not using `PKCE`.
+
+Browse to [https://developer.xero.com/myapps/](https://developer.xero.com/myapps/) and login, select your app. Click `Generate a secret` and copy the value into the `ClientSecret` property.
+
+#### Error reading license file
+
+Error message displayed when calling any `ITokenHelper` methods.
+
+![error reading licence file](img/error_reading_licence.png)
+
+Ensure that your licence file `aikeji.lic` or `*.aikeji.lic` is placed in the same folder as your executable and that your application has permission to read the file.
+
+#### Error processing licence file
+
+Error message displayed when calling any `ITokenHelper` methods.
+
+![error processing licence file](img/error_processing_licence.png)
+
+Your licence file is either an invalid aikeji licence, or the file has become corrupted.\
+If you are sure that you are using the correct licence file, please contact us for support.
+
+#### Licence file is not supported
+
+Error message displayed when calling any `ITokenHelper` methods.
+
+![licence file is not supported](img/error_licence_not_supported.png)
+
+Your licence file is for a newer version of the library.\
+Please update your `AIKEJI.Xero.OAuth2` nuget package.

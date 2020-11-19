@@ -1,6 +1,9 @@
 
 # AIKEJI.Xero.OAuth2 Release Notes
 
+## 1.5.2
+* Support: Update Licence Agreement
+
 ## 1.5.1
 
 * Security: Update CefSharp dependency with security update. [CefSharp release v85.3.130](https://github.com/cefsharp/CefSharp/releases/tag/v85.3.130)

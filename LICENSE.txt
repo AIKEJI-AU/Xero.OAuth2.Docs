@@ -7,24 +7,25 @@ BETWEEN:
 
 Doctor Tech Pty Ltd (ABN 81 637 065 199) (LICENSOR); and
 
-You ("You", "Your", or "Customer") (LICENSEE)
+You ("You", "Your", or "Customer") being the Licensee of the Licensed Software. 
+(LICENSEE)
 
-RECITALS:
+BACKGROUND:
 
-A. The Licensor owns certain computer software.
+A. The Licensor owns the Licensed Software.
 
-B. The Licensor has agreed to grant to the Licensee a non-exclusive licence to
-    use that computer software and its associated documentation on the terms
-    and conditions set out in this Agreement.
+B. The Licensor has agreed to grant to the Licensee a non-exclusive licence to 
+use the Licensed Software and its associated documentation on the terms and 
+conditions set out in this Agreement.
 
-BY DOWNLOADING AND INSTALLING THIS SOFTWARE, YOU ACCEPT ALL TERMS AND
-CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS AND
-CONDITIONS, DO NOT DOWNLOAD OR INSTALL THIS SOFTWARE. YOU MAY ONLY UNLOCK
-AND/OR USE THE SOFTWARE FOR WHICH YOU HAVE A PAID LICENCE OR FOR WHICH YOU HAVE
-LEGALLY RECEIVED A TRIAL LICENCE.
+BY DOWNLOADING AND INSTALLING THE LICENSED SOFTWARE, YOU ACCEPT ALL TERMS AND 
+CONDITIONS OF THIS AGREEMENT ON YOUR OWN BEHALF OR ON BEHALF OF THE ENTERPRISE 
+YOU REPRESENT.  IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, DO NOT 
+DOWNLOAD OR INSTALL THE LICENSED SOFTWARE. YOU MAY ONLY UNLOCK AND/OR USE THE 
+LICENSED SOFTWARE FOR A PAID LICENCE OR FOR WHICH YOU HAVE LEGALLY RECEIVED A 
+TRIAL LICENCE.
 
 OPERATIVE PROVISIONS:
-
 
 1. DEFINITIONS AND INTERPRETATION
 
@@ -40,32 +41,42 @@ OPERATIVE PROVISIONS:
            by a third party, other than through a breach of this Agreement; and
         b. information developed independently by a party.
    
-    DOCUMENTATION means any and all proprietary documentation made available to
-    the Licensee by the Licensor for use with the Licensed Software, including
-    any documentation available online.
+    DEVELOPER LICENCE means a licence of the type described in Schedule 1, 2(a).
+
+    DOCUMENTATION means any and all proprietary documentation in any format 
+    made available to the Licensee by the Licensor for use with the Licensed 
+    Software, including any documentation available online.
+
+    ENTERPRISE LICENCE means a licence of the type described in Schedule 1, 
+    2(b).
    
-    FEES means the fees calculated in accordance with Schedule 2.
+    LICENCE FEE means the licence fees calculated in accordance with Schedule 2.
    
-    FORCE MAJEURE EVENT means any event beyond the control of the relevant
-    party.
+    FORCE MAJEURE EVENT means any event beyond the control of the relevant 
+    party excepting the ability or inability to pay monies.
    
     GST has the meaning given in A New Tax System (Goods and Services Tax) Act
     1999 (Cth), or any other similar tax.
    
     INTELLECTUAL PROPERTY RIGHTS means all intellectual property rights,
-    including all copyright, patents, trade marks, design rights, trade
-    secrets, domain names, know how and other rights of a similar nature,
+    including all copyright, patents, trademarks, design rights, trade
+    secrets, domain names, knowhow and other rights of a similar nature,
     whether registrable or not and whether registered or not, and any
     applications for registration or rights to make such an application.
    
-    LICENSED SOFTWARE means the AIKEJI.Xero.OAuth2 software owned by the
-    Licensor and delivered to the Licensee by the Licensor pursuant to this
-    Agreement.
+    LICENSED SOFTWARE means the AIKEJI.Xero.OAuth2 software more particularly 
+    described in Schedule 1.
+
+    LICENSEE means the person or enterprise that has paid the Licence Fee.
    
     MORAL RIGHTS has the meaning given under the Copyright Act 1968 (Cth) and
     includes any similar rights existing in other countries.
+
+    NAMED USER Is the person whom the Licensee has advised will be the user 
+    of the Licensed Software and who may also be the Licensee.
    
-    TERM means indefinitely.
+    TERM means indefinitely in relation to a Developer Licence or Enterprise 
+    Licence.
    
     PRODUCTS AND SERVICES means products and services You offer.
    
@@ -85,11 +96,12 @@ OPERATIVE PROVISIONS:
 
 2. GRANT OF LICENCE
 
-    a. The Licensor grants to the Licensee a non-exclusive, world-wide,
-       non-transferable licence to use the Licensed Software and the
-       Documentation during the Term solely in connection with the operation of
-       its Products and Services, subject to and in accordance with the terms
-       and conditions set out in this Agreement.
+    a. In relation to a Developer Licence and an Enterprise Licence, the 
+       Licensor grants to the Licensee a non-exclusive, world-wide, 
+       non-transferable licence to use the Licensed Software and the 
+       Documentation during the Term solely in connection with the operation 
+       of its Products and Services, subject to and in accordance with the 
+       terms and conditions set out in this Agreement.
     b. The Licensee may permit end users of its Products and Services to use
        the Licensed Software as part of the normal process of using its
        Products and Services.
@@ -99,7 +111,8 @@ OPERATIVE PROVISIONS:
         ii. use the Licensed Software in any way that could damage the
             reputation of the Licensor or the goodwill or other rights
             associated with the Licensed Software;
-        iii. permit any third party to use the Licensed Software other than as
+        iii. grant any sub-licence of the Licensed Software to any person nor
+             permit any third party to use the Licensed Software other than as
              set out in paragraph (b);
         iv. permit any person to link to any page containing any part of the
             Licensed Software (including via a hyperlink or RSS feed) without
@@ -114,7 +127,8 @@ OPERATIVE PROVISIONS:
                Licensed Software or permit any third party to do so; or
         vi. modify or remove any copyright or proprietary notices on the
                Licensed Software or the Documentation.
-
+    d. The Licensee of a Trial Licence must cease using the Licensed Software 
+       at the end of the term for which the Trial Licence has been granted.
 
 3. DELIVERY AND INSTALLATION
 
@@ -151,7 +165,7 @@ OPERATIVE PROVISIONS:
         i. promptly notify the Licensor in writing;
         ii. not make any admissions or take any action in relation to the claim
             without the Licensor's written consent;
-        ii. permit the Licensor control over any and all investigations,
+        iii. permit the Licensor control over any and all investigations,
             negotiations, settlement and dispute resolution proceedings
             relating to the claim; and
         iv. cooperate with, assist and act at all times in accordance with the
@@ -162,8 +176,10 @@ OPERATIVE PROVISIONS:
 
 5. PAYMENT
 
-    a. The Licensee must pay the Licensor the Fees.
-    b. The Licensor will invoice the Licensee for the Fees in arrears.
+    a. The Licensee must pay the Licence Fee to the Licensor.
+    b. The Licensor will invoice the Licensee for the Licence Fee in arrears, 
+       such invoice will include the appropriate level of GST required to be 
+       paid.
     c. Except as otherwise provided in this Agreement, all monetary amounts
        referred to in this Agreement are in USD (United States Dollars).
     d. Each invoice is payable within 7 days upon receipt of the invoice. If
@@ -176,16 +192,16 @@ OPERATIVE PROVISIONS:
 
 6. GST
 
-    a. All amounts payable under this Agreement are expressed exclusive of GST.
-    b. In respect of any taxable supply, the Licensee must pay to the Licensor
-       an additional amount equal to the prevailing GST rate, payable at the 
-       same time and in the same manner as the Fees, subject to the receipt by 
-       the Licensee of a valid tax invoice.
+    a. All amounts payable under this Agreement are expressed inclusive of GST.
+    b. In respect of any taxable supply, the Licensee must pay to the Licensor 
+       an amount equal to the prevailing GST rate which is payable at the same 
+       time and in the same manner as the Licence Fees, subject to the receipt 
+       by the Licensee of a valid tax invoice.
 
 
 7. AUDIT
 
-    The Licensee must permit the Licensor (or its nominated auditor) to audit
+    a. The Licensee must permit the Licensor (or its nominated auditor) to audit
     the records and premises of the Licensee at any time during the Term and
     for 3 years following the end of the Term, on at least 5 days written
     notice, for the purpose of confirming the Licensee's compliance with this
@@ -194,28 +210,37 @@ OPERATIVE PROVISIONS:
 
 8. WARRANTIES
 
-   a. This software is provided by the Licensor "As is" and any express or
-      implied warranties, including, but not limited to, the implied warranties
-      of merchantability and fitness for a particular purpose are disclaimed.
-      In no event shall the Licensor be liable for any direct, indirect,
-      incidental, special, exemplary, or consequential damages (including, but
-      not limited to, procurement of substitute goods or services; loss of use,
-      data, or profits; or business interruption) however caused and on any 
-      theory of liability, whether in contract, strict liability, or tort 
-      (including negligence or otherwise) arising in any way out of the use of 
-      this software, even if advised of the possibility of such damage.
+    a. This software is provided by the Licensor "As is" and any express or 
+       implied warranties, including, but not limited to, the implied 
+       warranties of merchantability and fitness for a particular purpose are 
+       disclaimed. In no event shall the Licensor be liable for any direct, 
+       indirect, incidental, special, exemplary, or consequential damages (
+       including, but not limited to, procurement of substitute goods or 
+       services; loss of use, data, or profits; or business interruption) 
+       however caused and on any theory of liability, whether in contract, 
+       strict liability, or tort (including negligence or otherwise) arising in 
+       any way out of the use of this software, even if advised of the 
+       possibility of such damage.
+    b. You warrant that You are acquiring the Licensed Software for commercial 
+       purposes and that the Licensed Software will not be used in connection 
+       with or for consumer or domestic purposes.
 
 
 9. LIABILITY
 
-    a. To the full extent permitted by law, the Licensor excludes all liability
-       in respect of loss of data, interruption of business or any
-       consequential or incidental damages.
+    a. To the full extent permitted by law, the Licensor excludes all liability 
+       in respect of Consequential Loss. For the purposes of this clause 
+       Consequential Loss means loss of revenue; loss of profit or anticipated 
+       profits; loss of data or business or financial opportunity; loss of 
+       production; loss from business interruption; loss of reputation; punitive 
+       or exemplary damage; failure to achieve anticipated savings, 
+       reduction of costs or other savings and penalties payable under third 
+       party contracts however caused.
     b. To the full extent permitted by law, the Licensor excludes all
        representations, warranties or terms (whether express or implied) other
        than those expressly set out in this Agreement.
     c. The Licensor's total aggregate liability for all claims relating to this
-       Agreement is limited to the Fees payable under this Agreement.
+       Agreement is limited to the Licence Fee payable under this Agreement.
     d. Either party's liability for any claim relating to this Agreement will
        be reduced to the extent to which the other party contributed to the
        damage arising from the claim.
@@ -235,10 +260,43 @@ OPERATIVE PROVISIONS:
             b. the payment of the cost of having the services supplied again.
 
 
-10. TERMINATION
+10. INDEMNITY
+    a. Subject to cl 9  the Licensee and the Licensor each indemnifies (the 
+       Indemnifier) the other (the Indemnified) against any damage, loss, 
+       liability, cost, charge, expense, outgoing or payment suffered or 
+       incurred arising out of or in connection with:
+        i. breach of this Software Licence Agreement by the Indemnifier;
+        ii. act or omission of any third party under the control of the
+            Indemnifier;
+        iii. act or omission of the Indemnifier, its officers, employees and 
+             agents including but not limited to:
+             c. breach of any third party’s Intellectual Property Rights:
+             d. breach of any statute, regulation or law affecting provision 
+                of the Services;
+             e. breach of any law or, regulation concerning privacy including 
+                without limitation the Privacy Act 1988 (Cth);
+          where any such act, omission or breach arises out of or in respect of 
+          this Software Licence Agreement or the supply of services, except to 
+          the extent it is directly attributable to any negligent act or omission 
+          of the Indemnified.
+    b. The indemnity under the preceding paragraph shall be valid for six years 
+       from the date circumstances giving rise to a claim under the indemnity 
+       first arose.
+    c. To obtain the benefit of the indemnity under this clause, the 
+       Indemnified must:
+        i. notify the Indemnifier in writing immediately upon becoming aware of 
+           any circumstances giving rise to a claim under the indemnity;
+        ii. take all reasonably commercial steps to mitigate further loss and 
+            costs from the circumstances giving rise to a claim under the
+            indemnity; and
+        iii. must not settle any claim without the written approval of the 
+             Indemnifier.
 
-    A party may terminate this Agreement by written notice to the other if any
-    of the following events has occurred in respect of the other party:
+
+11. TERMINATION
+
+    a. A party may terminate this Agreement by written notice to the other if 
+       any of the following events has occurred in respect of the other party:
 
         a. a material breach of this Agreement which:
             i. is not remediable; or
@@ -248,20 +306,20 @@ OPERATIVE PROVISIONS:
            with notice to the other party.
 
 
-11. CONSEQUENCES OF TERMINATION
+12. CONSEQUENCES OF TERMINATION
 
-    If this Agreement is terminated or expires for any reason, then, in
+    a. If this Agreement is terminated or expires for any reason, then, in
     addition and without prejudice to any other rights or remedies available:
 
-        a. the parties are immediately released from their obligations under
-           the Agreement except those obligations in clauses 8, 10, 12, and 13
-           and any other obligations that, by their nature, survive
+        i. the parties are immediately released from their obligations under
+           the Agreement except those obligations in clauses 8, 9, 10, 11, 13
+           and 14 and any other obligations that, by their nature, survive
            termination;
-        b. each party retains the claims it has against the other;
-        c. the Licensee must immediately pay all outstanding Fees.
+        ii. each party retains the claims it has against the other;
+        iii. the Licensee must immediately pay all outstanding Licence Fee.
 
 
-12. CONFIDENTIALITY
+13. CONFIDENTIALITY
 
     a. A party must not, without the prior written consent of the other, use or
        disclose the other party's Confidential Information unless expressly
@@ -286,7 +344,7 @@ OPERATIVE PROVISIONS:
        or on termination of this Agreement for any reason.
 
 
-13. NOTICES
+14. NOTICES
 
     a. All notices must be in writing and can be given by:
         i. hand delivery during normal business hours;
@@ -302,7 +360,21 @@ OPERATIVE PROVISIONS:
              business day after transmission.
 
 
-14. GENERAL
+15. SUPPORT
+
+    a. Each new Software Licence issued comes with support which comprises free 
+       upgrades to newer versions for a period of 12 months commencing from the 
+       date the Software Licence is issued.
+    b. Whilst the Software Licence is a perpetual licence that does not expire, 
+       the ability to update to newer versions ends when support expires.
+    c. Support of upgrades to newer versions can be purchased at a reduced fee 
+       on an annual basis.
+    d. The Licensed Software is specifically built for Xero OAuth2. Therefore, 
+       Licensor will cease supporting the Licensed Software when Xero cease the 
+       support of its OAuth2 API.
+
+
+16. GENERAL
 
     a. The Licensee must not assign, sublicence or otherwise deal in any other
        way with any of its rights under this Agreement without the prior
@@ -335,36 +407,32 @@ OPERATIVE PROVISIONS:
        immediately terminate this Agreement by written notice.
     k. All stamp duties and other government charges in relation to this
        Agreement must be paid by the Licensee.
-    l. This Agreement is governed by the laws of Queensland and each party
-       submits to the jurisdiction of the courts of Queensland.
-
-
-15. TERMS AND CONDITIONS OF SUPPORT
-
-    a. Each new licence purchased and issued comes with one year's support of
-       free upgrades to newer versions.
-    b. The licence purchased is a perpetual licence that does not expire.
-       However, the ability to update to newer versions ends when support
-       expires.
-    c. Support of upgrades to newer versions can be purchased at a reduced fee
-       on a yearly basis.
-    d. The AIKEJI.Xero.OAuth2 library is specifically built for Xero OAuth2.
-       Therefore, AIKEJI will cease supporting the library when Xero cease the
-       support of its OAuth2 API.
-
+    l. This Agreement is governed by the laws of the State of Victoria and each 
+       party submits to the jurisdiction of the courts of Victoria.
 
 
 SCHEDULE 1
 
 1. Licensed Software
-
-    This library is a .NET library that presents a simplified API for
-    retrieving access tokens using Xero's OAuth2 API with an integrated login
-    experience using an embedded browser.
+    a) AIKEJI.Xero.OAuth2 is a .NET library that presents a simplified API for 
+       retrieving access tokens using Xero's OAuth2 API with an integrated 
+       login experience using an embedded browser.
+2.  Licence Type
+    a) The Developer Licence is granted for use by the Named User, for the 
+       Licensee’s use only in accordance with the terms and conditions of this 
+       Software Licence Agreement, upon payment of the Developer Licence Fee.
+    b) The Enterprise Licence is granted for use by multiple persons working in 
+       the named enterprise or business in accordance with the terms and 
+       conditions of this Software Licence Agreement, upon payment of the 
+       Enterprise Licence Fee.
+    c) If you have been granted a Trial Licence, then you may use the Licensed 
+       Software in accordance with the terms of the trial licence and this 
+       Software Licence Agreement.
 
 
 SCHEDULE 2
 
-1. Fees
+1.  Licence Fees
+    a) Developer Licence Fee $220 (including GST) 
+    b) Enterprise Licence Fee $880 (including GST)
 
-    $200

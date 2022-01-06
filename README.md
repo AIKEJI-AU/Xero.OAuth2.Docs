@@ -1,5 +1,8 @@
 # AIKEJI.Xero.OAuth2.Docs
 
+## Important!
+This library is not maintained and will receive no further functional update or support.
+
 <!-- TOC -->
 
 1. [Description](#description)
@@ -457,21 +460,15 @@ Please ensure that only one licence file is present at a time.
 
 ## Support
 
-For any questions or issues related to using the library itself in code, please use [GitHub issues](https://github.com/AIKEJI-AU/Xero.OAuth2.Docs/issues).
-
-For any questions or issues related to licensing, please contact us directly using [Contact Us](#contact-us) below.
+No support is available.
 
 ## Contact Us
 
 [https://aikeji.com.au/contact.html](https://aikeji.com.au/contact.html)
 
-## Request Trial Licence
-
-[https://aikeji.com.au/products.html](https://aikeji.com.au/products.html)
-
 ## Purchase Licence
 
-[https://aikeji.com.au/products.html](https://aikeji.com.au/products.html)
+This library has been discontinued therefore not available for purchase.
 
 ## Troubleshooting
 
